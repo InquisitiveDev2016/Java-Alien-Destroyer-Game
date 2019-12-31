@@ -6,4 +6,4 @@ Created this project in order to learn more about various Java libraries, animat
 <br>
 
 
-<img src="http://zetcode.com/img/gfx/javagames/collision.png" alt="pic" height="450" width="450">
+<img style="text-align: centre" src="http://zetcode.com/img/gfx/javagames/collision.png" alt="pic" height="450" width="450">
