@@ -123,15 +123,30 @@ public class Board extends JPanel implements ActionListener {
     
     //Messages displays either when all ships are destroyed or if collided with one ship
     private void drawGameOver(Graphics g) {
+    	
+    	if(aliens.size() < 1) {
+    		String msg = "You Win!";
+            Font small = new Font("Helvetica", Font.BOLD, 14);
+            FontMetrics fm = getFontMetrics(small);
 
-        String msg = "Game Over";
-        Font small = new Font("Helvetica", Font.BOLD, 14);
-        FontMetrics fm = getFontMetrics(small);
+            g.setColor(Color.white);
+            g.setFont(small);
+            g.drawString(msg, (B_WIDTH - fm.stringWidth(msg)) / 2,
+                    B_HEIGHT / 2);
+    	}
+    	else {
+    		
+    		String msg = "Game Over";
+            Font small = new Font("Helvetica", Font.BOLD, 14);
+            FontMetrics fm = getFontMetrics(small);
 
-        g.setColor(Color.white);
-        g.setFont(small);
-        g.drawString(msg, (B_WIDTH - fm.stringWidth(msg)) / 2,
-                B_HEIGHT / 2);
+            g.setColor(Color.white);
+            g.setFont(small);
+            g.drawString(msg, (B_WIDTH - fm.stringWidth(msg)) / 2,
+                    B_HEIGHT / 2);
+    		
+    	}
+        
     }
 
     //Each action event represents one game cycle. The game logic is factored into specific methods.
